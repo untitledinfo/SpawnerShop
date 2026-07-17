@@ -1,0 +1,21 @@
+items:
+  zombie:
+    material: SPAWNER
+    mob: ZOMBIE
+    name: '&aZombie Spawner'
+    slot: 10
+    buy: 50000
+    sell: 25000
+    permission: ''
+    glow: true
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft Click &7Buy x1', '&eRight Click &7Sell x1', '&eShift-click &7Buy/Sell x64']
+  skeleton:
+    material: SPAWNER
+    mob: SKELETON
+    name: '&fSkeleton Spawner'
+    slot: 12
+    buy: 65000
+    sell: 32500
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']

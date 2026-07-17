@@ -1,0 +1,25 @@
+name: SpawnerShop
+version: 1.0.0
+main: com.spawnershop.SpawnerShopPlugin
+api-version: '1.21'
+folia-supported: true
+authors: [SpawnerShop]
+description: Configurable Paper/Bukkit spawner shop.
+depend: [Vault]
+softdepend: [PlaceholderAPI, LuckPerms, Essentials, CMI, DecentHolograms, SilkSpawners, MineableSpawners, RoseStacker, WildStacker, ItemsAdder, Oraxen, MMOItems, EconomyShopGUI, Citizens, ProtocolLib]
+commands:
+  spawnershop:
+    aliases: [shopspawner, shop]
+    description: Open and administer SpawnerShop.
+    usage: /spawnershop [reload|open|editor|debug]
+permissions:
+  spawnershop.use: {default: true}
+  spawnershop.buy: {default: true}
+  spawnershop.sell: {default: true}
+  spawnershop.buyall: {default: true}
+  spawnershop.sellall: {default: true}
+  spawnershop.admin: {default: op}
+  spawnershop.reload: {default: op}
+  spawnershop.editor: {default: op}
+  spawnershop.debug: {default: op}
+  spawnershop.bypass: {default: op}

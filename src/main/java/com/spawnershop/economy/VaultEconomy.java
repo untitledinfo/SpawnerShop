@@ -1,0 +1,4 @@
+package com.spawnershop.economy;
+import net.milkbowl.vault.economy.Economy; import org.bukkit.OfflinePlayer; import org.bukkit.plugin.Plugin; import org.bukkit.plugin.RegisteredServiceProvider;
+import java.math.BigDecimal;
+public final class VaultEconomy { private final Plugin plugin; private Economy economy; public VaultEconomy(Plugin plugin){this.plugin=plugin;} public boolean connect(){RegisteredServiceProvider<Economy> p=plugin.getServer().getServicesManager().getRegistration(Economy.class); economy=p==null?null:p.getProvider();return economy!=null;} public boolean has(OfflinePlayer p,BigDecimal a){return economy.has(p,a.doubleValue());} public boolean withdraw(OfflinePlayer p,BigDecimal a){return economy.withdrawPlayer(p,a.doubleValue()).transactionSuccess();} public boolean deposit(OfflinePlayer p,BigDecimal a){return economy.depositPlayer(p,a.doubleValue()).transactionSuccess();} public String format(BigDecimal a){return economy.format(a.doubleValue());} }

@@ -1,0 +1,17 @@
+settings:
+  debug: false
+  confirm-threshold: 100000
+  transaction-cooldown-ms: 150
+  disabled-worlds: []
+  sell-all-confirmation: false
+  sell-all-include-offhand: true
+  sound-volume: 1.0
+  sound-pitch: 1.0
+  database: sqlite
+  mysql: {host: localhost, port: 3306, database: spawnershop, username: root, password: ''}
+shop:
+  title: '&6Spawner Shop'
+  size: 54
+  background: {material: BLACK_STAINED_GLASS_PANE, name: ' '}
+  buy-all: {slot: 49, material: LIME_STAINED_GLASS, name: '&aBuy All (selected)', mode: AFFORDABLE}
+  sell-all: {slot: 48, material: RED_STAINED_GLASS, name: '&cSell All', enabled: true}
