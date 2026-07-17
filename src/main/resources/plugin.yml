@@ -12,6 +12,10 @@ commands:
     aliases: [shopspawner, shop]
     description: Open and administer SpawnerShop.
     usage: /spawnershop [reload|open|editor|debug]
+  sell:
+    aliases: [sellitems]
+    description: Sell all items configured in sell-items.yml.
+    usage: /sell
 permissions:
   spawnershop.use: {default: true}
   spawnershop.buy: {default: true}

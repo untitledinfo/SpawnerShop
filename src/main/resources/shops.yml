@@ -3,9 +3,9 @@ items:
     material: SPAWNER
     mob: ZOMBIE
     name: '&aZombie Spawner'
-    slot: 10
-    buy: 50000
-    sell: 25000
+    slot: 0
+    buy: 5000
+    sell: 2500
     permission: ''
     glow: true
     enabled: true
@@ -14,8 +14,82 @@ items:
     material: SPAWNER
     mob: SKELETON
     name: '&fSkeleton Spawner'
-    slot: 12
-    buy: 65000
-    sell: 32500
+    slot: 1
+    buy: 5000
+    sell: 2500
     enabled: true
     lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']
+  spider:
+    material: SPAWNER
+    mob: SPIDER
+    name: '&a&lSpider Spawner'
+    slot: 2
+    buy: 5000
+    sell: 2500
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft click &7Buy 1', '&eRight click &7Sell 1']
+  creeper:
+    material: SPAWNER
+    mob: CREEPER
+    name: '&a&lCreeper Spawner'
+    slot: 3
+    buy: 5000
+    sell: 2500
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft click &7Buy 1', '&eRight click &7Sell 1']
+  enderman:
+    material: SPAWNER
+    mob: ENDERMAN
+    name: '&d&lEnderman Spawner'
+    slot: 4
+    buy: 15000
+    sell: 7500
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft click &7Buy 1', '&eRight click &7Sell 1']
+  blaze:
+    material: SPAWNER
+    mob: BLAZE
+    name: '&6&lBlaze Spawner'
+    slot: 5
+    buy: 20000
+    sell: 10000
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft click &7Buy 1', '&eRight click &7Sell 1']
+  iron_golem:
+    material: SPAWNER
+    mob: IRON_GOLEM
+    name: '&f&lIron Golem Spawner'
+    slot: 6
+    buy: 100000
+    sell: 50000
+    enabled: true
+    lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}', '', '&eLeft click &7Buy 1', '&eRight click &7Sell 1']
+  cave_spider: {material: SPAWNER, mob: CAVE_SPIDER, name: '&2&lCave Spider Spawner', slot: 7, buy: 7500, sell: 3750, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  witch: {material: SPAWNER, mob: WITCH, name: '&5&lWitch Spawner', slot: 8, buy: 30000, sell: 15000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  zombie_villager: {material: SPAWNER, mob: ZOMBIE_VILLAGER, name: '&2&lZombie Villager Spawner', slot: 9, buy: 12500, sell: 6250, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  drowned: {material: SPAWNER, mob: DROWNED, name: '&3&lDrowned Spawner', slot: 10, buy: 10000, sell: 5000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  husk: {material: SPAWNER, mob: HUSK, name: '&6&lHusk Spawner', slot: 11, buy: 7500, sell: 3750, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  stray: {material: SPAWNER, mob: STRAY, name: '&b&lStray Spawner', slot: 12, buy: 7500, sell: 3750, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  silverfish: {material: SPAWNER, mob: SILVERFISH, name: '&7&lSilverfish Spawner', slot: 13, buy: 10000, sell: 5000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  slime: {material: SPAWNER, mob: SLIME, name: '&a&lSlime Spawner', slot: 14, buy: 12000, sell: 6000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  magma_cube: {material: SPAWNER, mob: MAGMA_CUBE, name: '&c&lMagma Cube Spawner', slot: 15, buy: 15000, sell: 7500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  guardian: {material: SPAWNER, mob: GUARDIAN, name: '&b&lGuardian Spawner', slot: 16, buy: 35000, sell: 17500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  shulker: {material: SPAWNER, mob: SHULKER, name: '&d&lShulker Spawner', slot: 17, buy: 50000, sell: 25000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  phantom: {material: SPAWNER, mob: PHANTOM, name: '&9&lPhantom Spawner', slot: 18, buy: 25000, sell: 12500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  pig: {material: SPAWNER, mob: PIG, name: '&d&lPig Spawner', slot: 19, buy: 5000, sell: 2500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  cow: {material: SPAWNER, mob: COW, name: '&f&lCow Spawner', slot: 20, buy: 7500, sell: 3750, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  sheep: {material: SPAWNER, mob: SHEEP, name: '&f&lSheep Spawner', slot: 21, buy: 7500, sell: 3750, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  chicken: {material: SPAWNER, mob: CHICKEN, name: '&e&lChicken Spawner', slot: 22, buy: 5000, sell: 2500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  rabbit: {material: SPAWNER, mob: RABBIT, name: '&f&lRabbit Spawner', slot: 23, buy: 10000, sell: 5000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  villager: {material: SPAWNER, mob: VILLAGER, name: '&a&lVillager Spawner', slot: 24, buy: 60000, sell: 30000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  wolf: {material: SPAWNER, mob: WOLF, name: '&7&lWolf Spawner', slot: 25, buy: 15000, sell: 7500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  allay: {material: SPAWNER, mob: ALLAY, name: '&b&lAllay Spawner', slot: 26, buy: 75000, sell: 37500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  axolotl: {material: SPAWNER, mob: AXOLOTL, name: '&d&lAxolotl Spawner', slot: 27, buy: 20000, sell: 10000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  camel: {material: SPAWNER, mob: CAMEL, name: '&6&lCamel Spawner', slot: 28, buy: 20000, sell: 10000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  armadillo: {material: SPAWNER, mob: ARMADILLO, name: '&8&lArmadillo Spawner', slot: 29, buy: 15000, sell: 7500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  breeze: {material: SPAWNER, mob: BREEZE, name: '&b&lBreeze Spawner', slot: 30, buy: 40000, sell: 20000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  bogged: {material: SPAWNER, mob: BOGGED, name: '&2&lBogged Spawner', slot: 31, buy: 12000, sell: 6000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  wither_skeleton: {material: SPAWNER, mob: WITHER_SKELETON, name: '&8&lWither Skeleton Spawner', slot: 32, buy: 35000, sell: 17500, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  zoglin: {material: SPAWNER, mob: ZOGLIN, name: '&c&lZoglin Spawner', slot: 33, buy: 20000, sell: 10000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  piglin: {material: SPAWNER, mob: PIGLIN, name: '&6&lPiglin Spawner', slot: 34, buy: 30000, sell: 15000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}
+  ghast: {material: SPAWNER, mob: GHAST, name: '&f&lGhast Spawner', slot: 35, buy: 80000, sell: 40000, enabled: true, lore: ['&7Buy: &a${buy}', '&7Sell: &c${sell}']}

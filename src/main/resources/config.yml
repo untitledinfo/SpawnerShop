@@ -13,5 +13,5 @@ shop:
   title: '&6Spawner Shop'
   size: 54
   background: {material: BLACK_STAINED_GLASS_PANE, name: ' '}
-  buy-all: {slot: 49, material: LIME_STAINED_GLASS, name: '&aBuy All (selected)', mode: AFFORDABLE}
-  sell-all: {slot: 48, material: RED_STAINED_GLASS, name: '&cSell All', enabled: true}
+  buy-all: {slot: 46, material: EMERALD, name: '&a&lBUY ALL SPAWNERS', mode: AFFORDABLE}
+  sell-all: {slot: 47, material: GOLD_INGOT, name: '&6&lSELL ALL SPAWNERS', enabled: true}

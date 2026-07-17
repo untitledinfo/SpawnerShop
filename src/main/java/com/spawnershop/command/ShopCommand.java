@@ -1,3 +1,36 @@
 package com.spawnershop.command;
-import com.spawnershop.SpawnerShopPlugin; import com.spawnershop.util.Text; import org.bukkit.Bukkit; import org.bukkit.command.*; import org.bukkit.entity.Player; import java.util.*;
-public final class ShopCommand implements CommandExecutor, TabCompleter { private final SpawnerShopPlugin plugin; public ShopCommand(SpawnerShopPlugin p){plugin=p;} public boolean onCommand(CommandSender sender,Command command,String label,String[] args){if(args.length==0){if(!(sender instanceof Player p)){sender.sendMessage("Players only.");return true;}plugin.view().open(p);return true;}switch(args[0].toLowerCase(Locale.ROOT)){case "reload"->{if(!sender.hasPermission("spawnershop.reload")){no(sender);return true;}plugin.reloadPlugin();sender.sendMessage(Text.color("&aSpawnerShop configuration reloaded."));}case "open"->{if(!sender.hasPermission("spawnershop.admin")){no(sender);return true;}if(args.length<2){sender.sendMessage("/spawnershop open <player>");return true;}Player target=Bukkit.getPlayerExact(args[1]);if(target==null)sender.sendMessage("Player not found.");else plugin.view().open(target);}case "editor","debug"->{if(!sender.hasPermission("spawnershop.admin")){no(sender);return true;}sender.sendMessage(Text.color("&eThe YAML-first editor is available in this release; edit shops.yml then run /spawnershop reload."));}default->sender.sendMessage(Text.color("&e/spawnershop [reload|open <player>|editor|debug]"));}return true;}private void no(CommandSender s){s.sendMessage(Text.color("&cYou do not have permission."));}public List<String> onTabComplete(CommandSender s,Command c,String a,String[] args){if(args.length==1)return List.of("reload","open","editor","debug").stream().filter(x->x.startsWith(args[0].toLowerCase())).toList();if(args.length==2&&args[0].equalsIgnoreCase("open"))return Bukkit.getOnlinePlayers().stream().map(Player::getName).filter(x->x.toLowerCase().startsWith(args[1].toLowerCase())).toList();return List.of();}}
+
+import com.spawnershop.SpawnerShopPlugin;
+import com.spawnershop.util.Text;
+import org.bukkit.Bukkit;
+import org.bukkit.command.*;
+import org.bukkit.entity.Player;
+import java.util.List;
+import java.util.Locale;
+
+/** Handles the shop and bulk normal-item sell commands. */
+public final class ShopCommand implements CommandExecutor, TabCompleter {
+  private final SpawnerShopPlugin plugin;
+  public ShopCommand(SpawnerShopPlugin plugin) { this.plugin = plugin; }
+  @Override public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    if (command.getName().equalsIgnoreCase("sell")) {
+      if (sender instanceof Player player) plugin.transactions().sellConfiguredItems(player, plugin.sellPrices().prices());
+      else sender.sendMessage("Players only.");
+      return true;
+    }
+    if (args.length == 0) { if (sender instanceof Player player) plugin.view().open(player); else sender.sendMessage("Players only."); return true; }
+    switch (args[0].toLowerCase(Locale.ROOT)) {
+      case "reload" -> { if (!sender.hasPermission("spawnershop.reload")) no(sender); else { plugin.reloadPlugin(); sender.sendMessage(Text.color("&aSpawnerShop configuration reloaded.")); } }
+      case "open" -> { if (!sender.hasPermission("spawnershop.admin")) no(sender); else if (args.length < 2) sender.sendMessage("/spawnershop open <player>"); else { Player target = Bukkit.getPlayerExact(args[1]); if (target == null) sender.sendMessage("Player not found."); else plugin.view().open(target); } }
+      default -> sender.sendMessage(Text.color("&e/spawnershop [reload|open <player>|editor|debug]"));
+    }
+    return true;
+  }
+  private void no(CommandSender sender) { sender.sendMessage(Text.color("&cYou do not have permission.")); }
+  @Override public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+    if (command.getName().equalsIgnoreCase("sell")) return List.of();
+    if (args.length == 1) return List.of("reload", "open", "editor", "debug").stream().filter(x -> x.startsWith(args[0].toLowerCase(Locale.ROOT))).toList();
+    if (args.length == 2 && args[0].equalsIgnoreCase("open")) return Bukkit.getOnlinePlayers().stream().map(Player::getName).filter(x -> x.toLowerCase(Locale.ROOT).startsWith(args[1].toLowerCase(Locale.ROOT))).toList();
+    return List.of();
+  }
+}
